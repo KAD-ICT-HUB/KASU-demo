@@ -1,0 +1,135 @@
+.home{
+    background: radial-gradient(#525252,#131313);
+}
+.nav-container{
+    background: rgb(7, 7, 7);
+    position: sticky;
+    top: 0;
+    z-index: 2; 
+
+  
+}
+
+nav{
+    width: 80%;
+    margin: auto;
+    min-height: 10vh;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        list-style: none;
+    }
+    .logo{
+        flex: 3;
+        position: relative;
+        h1{
+            font-family: 'Lobster';
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8.5rem;
+            height: 7.5rem;
+            background: radial-gradient(crimson, coral, crimson);
+            border-radius: 50%;
+            transform: translate(-5%, -30%);
+            mix-blend-mode: screen;
+        }
+        z-index: 1;
+    }
+
+    .order{
+        background: radial-gradient(crimson, coral,crimson);
+        padding: 1rem 2rem;
+         border-radius: 2rem;
+    }
+}
+
+.showcase{
+    display: grid;
+    min-height: 90vh;
+    grid-template-columns: 10% repeat(3, minmax(5rem,1fr)) 10%;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    h2{
+        grid-column: 2/3;
+        position: relative;
+        top: 70px;
+        background: linear-gradient(50deg,white,lightpink,crimson);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        
+    }
+    img{
+        grid-column: 3/4;
+        grid-row: 2/3;
+        // align-self: center;
+        // justify-self: center;
+        height: 80%;
+        width: 120%;
+        object-fit: cover;
+    }
+    .info-text{
+        // align-self: flex-end;
+        grid-column: 4/5;
+        grid-row: 3/4;
+
+     
+        h3{
+            padding-bottom: 3rem;
+            text-align: center;
+            
+        }
+        p{
+            text-align: center;
+        
+        }
+        overflow: hidden;
+    }
+
+    .info{
+        grid-column: 3/4;
+        grid-row: 3/4;
+
+        h3{
+            padding-bottom: 3rem;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            
+        }
+        overflow: hidden;
+    }
+
+    .info1{
+        grid-column:2/4;
+        grid-row: 3/4;
+        position: relative;
+        
+        h3{
+            padding-bottom: 3rem;
+            position: absolute;
+            left: 60px;
+              
+        }
+        p{
+            width: 50%;
+            text-align: center;
+            position: relative;
+            top: 60px;
+        }
+        overflow: hidden;
+       
+    }
+
+}

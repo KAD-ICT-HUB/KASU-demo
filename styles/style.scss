@@ -1,0 +1,125 @@
+html{
+    font-size: 62.5%;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    font-family:  'cursive';
+}
+h1{
+    font-size: 2.1rem;
+    font-family: 'Lobster', 'sans-serif';
+    font-weight: lighter;
+}
+
+h2{
+    font-size: 5rem;
+    font-family: 'Monospace', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    
+
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.5rem;
+}
+p{
+    font-size: 1.8rem;
+}
+li{
+    font-size: 2rem;
+    font-family: 'Lobster';
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: cyan;
+    letter-spacing: 2px;
+}
+@import 'home';
+@import 'features';
+@import 'soon';
+@import 'footer';
+@import 'about';
+
+@media screen and (max-width:1200px){
+        html{
+            font-size: 50%;
+            
+        }
+        nav{
+            #logo{
+                flex: 1;
+            }
+            ul{
+                li{
+                    margin-left: 5rem;
+                }
+            }
+        }
+        .showcase{
+            grid-template-columns: 10% 1fr 10%;
+        
+
+            img{
+                width: 100%;
+                object-fit: contain;
+            }
+            img,h2,.info-text{
+             grid-column: 2/3;
+             text-align: center;
+              
+            }
+            .info{
+                display: none;
+               
+            }
+            .info1{
+                display: none;
+          
+            }
+           
+        }
+       .features{
+           align-items: center;
+           justify-content: center;
+
+           h2{
+               margin-top: 4rem;
+           }
+           .cards{
+               flex-direction: column;
+               width: 60%;
+
+               .card{
+                   margin: 5rem 0rem;
+               }
+           }
+       }
+
+       .soon{
+           overflow: hidden;
+           img{
+               width: 60%;
+           }
+           h2{
+               font-size: 4rem;
+               text-align: center;
+           }
+       }
+
+       footer{
+           h1{
+               flex: 1;
+           }
+       }
+}
